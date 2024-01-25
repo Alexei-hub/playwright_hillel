@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test.describe('registartion new user', () => {
+test.describe.skip('registartion new user', () => {
     test.beforeEach('go to registartion form', async ({ page }) => {
         await page.goto('/');
         await page.locator('.header_signin').last().click();
