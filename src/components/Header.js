@@ -5,7 +5,7 @@ export default class Header extends BaseComponent {
     constructor(page) {
         super(page, '.header');
         this.loginForm = new LoginForm(this._page);
-        this._signInBtn = page.locator('.header_signin').last();
+        this._signInBtn = this._compomemt.locator('.header_signin').last();
     }
 
     async clickLoginBtn() {

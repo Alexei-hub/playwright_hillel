@@ -3,9 +3,9 @@ import RegistartionForm from "./RegistartionForm";
 
 export default class LoginForm extends BaseComponent{
     constructor(page) {
-        super(page, 'modal-content');
+        super(page, '.modal-content');
         this.registartionForm = new RegistartionForm(this._page);
-        this._registartionBtn = page.locator('.btn-link').last();
+        this._registartionBtn = this._compomemt.locator('.btn-link').last();
     }   
 
     async clickRegistrationBtn() {

@@ -4,12 +4,12 @@ import BaseComponent from "./BaseComponent";
 export default class RegistartionForm extends BaseComponent {
     constructor(page) {
         super(page, '.modal-dialog');
-        this.nameField = page.locator('#signupName');
-        this.lastNameField = page.locator('#signupLastName');
-        this.emailField = page.locator('#signupEmail');
-        this.passwordField = page.locator('#signupPassword');
-        this.repeatPasswordField = page.locator('#signupRepeatPassword');
-        this.registerBtn = this._page.getByRole('button', { name: 'Register' });
+        this.nameField = this._compomemt.locator('#signupName');
+        this.lastNameField = this._compomemt.locator('#signupLastName');
+        this.emailField = this._compomemt.locator('#signupEmail');
+        this.passwordField = this._compomemt.locator('#signupPassword');
+        this.repeatPasswordField = this._compomemt.locator('#signupRepeatPassword');
+        this.registerBtn = this._compomemt.getByRole('button', { name: 'Register' });
         this.requireErrText = this._compomemt.locator('.invalid-feedback');
         this.profilePage = new ProfilePage(this._page);
     }

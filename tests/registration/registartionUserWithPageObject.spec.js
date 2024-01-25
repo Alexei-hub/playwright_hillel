@@ -13,11 +13,11 @@ test.describe('registartion new user', () => {
     test('positive case. Registartion with correct data and deleting user', async ({ page }) => {
         const registartionForm = new RegistartionForm(page);
         await registartionForm.fillRegistartionFormFields('aqaName', 'aqaLastName', 'aqa_test@test.com', 'Aqa123456', 'Aqa123456')
-        const profilePage = registartionForm.clickRegisterBtn();
-        await expect.soft((await profilePage).tittlePageText).toHaveText('Garage');
-        const profileSettingPage = (await profilePage).clickSettingBtn();
-        (await profileSettingPage).removeAccountBtn.click();
-        (await profileSettingPage).removeBtnInAcceptPopup.click();
+        const profilePage = await registartionForm.clickRegisterBtn();
+        await expect.soft(await profilePage.tittlePageText).toHaveText('Garage');
+        const profileSettingPage = await profilePage.clickSettingBtn();
+        await profileSettingPage.removeAccountBtn.click();
+        await profileSettingPage.removeBtnInAcceptPopup.click();
     });
 
     test('negative case. Empty name field', async ({ page }) => {
