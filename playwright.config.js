@@ -42,7 +42,7 @@ module.exports = defineConfig({
     },
 
     {
-      name: 'homework_15',
+      name: 'homework_16',
       testDir: './tests/registration',
     },
 
