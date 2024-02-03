@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test --project homework_16 --headed "
+    "test": "npx playwright test --project homework_16 --headed ",
+    "test_hm17" : "npx playwright test --config=configs/hm_17.config.js --headed"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +13,8 @@
   "devDependencies": {
     "@playwright/test": "^1.40.1",
     "@types/node": "^20.11.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.1"
   }
 }
