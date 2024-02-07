@@ -13,7 +13,7 @@ module.exports = defineConfig({
 
   workers: process.env.CI ? 1 : 1,
 
-  reporter: 'html',
+  reporter: [['html', { open: 'always' }]],
 
   expect: {
     timeout: 10000,
