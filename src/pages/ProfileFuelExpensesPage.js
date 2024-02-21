@@ -1,5 +1,5 @@
 import BasePage from "./BasePage";
-import ProfilePage from "./ProfilePage";
+import GaragePage from "./GaragePage";
 
 export default class ProfileFuelExpensesPage extends BasePage {
     constructor(page) {
@@ -26,6 +26,6 @@ export default class ProfileFuelExpensesPage extends BasePage {
 
     async clickLinkYourGarage() {
         await this.linkYourGarageBelowCenterImage.click();
-        return new ProfilePage(this._page);
+        return new GaragePage(this._page);
     }
 }

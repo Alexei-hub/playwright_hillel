@@ -1,4 +1,4 @@
-import ProfilePage from "../pages/ProfilePage";
+import GaragePage from "../pages/GaragePage";
 import BaseComponent from "./BaseComponent";
 
 export default class RegistartionForm extends BaseComponent {
@@ -11,7 +11,7 @@ export default class RegistartionForm extends BaseComponent {
         this.repeatPasswordField = this._compomemt.locator('#signupRepeatPassword');
         this.registerBtn = this._compomemt.getByRole('button', { name: 'Register' });
         this.requireErrText = this._compomemt.locator('.invalid-feedback');
-        this.profilePage = new ProfilePage(this._page);
+        this.profilePage = new GaragePage(this._page);
     }
 
     async fillRegistartionFormFields(name, lastName, email, password, repeatPassword) {
